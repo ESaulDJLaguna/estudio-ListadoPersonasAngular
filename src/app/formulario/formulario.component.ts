@@ -17,10 +17,10 @@ import { PersonasService } from '../personas.service';
 export class FormularioComponent {
   //* ATRIBUTOS
   // @Output() personaCreada = new EventEmitter<Persona>();
-  // nombreInput: string = '';
-  // apellidoInput: string = '';
-  @ViewChild('nombreInput') nombre!: ElementRef;
-  @ViewChild('apellidoInput') apellido!: ElementRef;
+  nombreInput: string = '';
+  apellidoInput: string = '';
+  // @ViewChild('nombreInput') nombre!: ElementRef;
+  // @ViewChild('apellidoInput') apellido!: ElementRef;
 
   //* CONSTRUCTOR
   constructor(
@@ -37,12 +37,12 @@ export class FormularioComponent {
   //* MÉTODOS
   // agregarPersona(nombreInput: HTMLInputElement,apellidoInput: HTMLInputElement) {
   agregarPersona() {
-    // const persona1 = new Persona(this.nombreInput, this.apellidoInput);
+    const persona1 = new Persona(this.nombreInput, this.apellidoInput);
     // const persona1 = new Persona(nombreInput.value, apellidoInput.value);
-    const persona1 = new Persona(
+    /* const persona1 = new Persona(
       this.nombre.nativeElement.value,
       this.apellido.nativeElement.value
-    );
+    ); */
     // this.personas.push(persona1);
     //this.personaCreada.emit(persona1);
     /* this.loggingService.enviaMensajeAConsola(
