@@ -23,4 +23,21 @@ export class PersonasService {
     );
     this.personas.push(persona);
   }
+
+  encontrarPersona(index: number) {
+    const persona: Persona = this.personas[index];
+    return persona;
+  }
+
+  modificarPersona(index: number, persona: Persona) {
+    // Como estamos utilizando referencias
+    const persona1 = this.personas[index];
+    // Podemos modificar el arreglo original
+    persona1.nombre = persona.nombre;
+    persona1.apellido = persona.apellido;
+  }
+
+  eliminarPersona(index: number) {
+    this.personas.splice(index, 1);
+  }
 }

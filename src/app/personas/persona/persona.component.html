@@ -1,0 +1,12 @@
+<div class="item">
+	<ul>
+		<li>
+			<a [routerLink]="['/personas/editar', indice]" [queryParams]="{modoEdicion: 1}">
+				{{ persona.nombre }} {{ persona.apellido }}
+			</a>
+		</li>
+	</ul>
+	<!-- El evento click es el que enviará la información a otro componente -->
+	<!-- <input type="checkbox" (click)="emitirSaludo()">
+	<a>{{ indice + 1 }}: {{ persona.nombre }} {{ persona.apellido }}</a> -->
+</div>
