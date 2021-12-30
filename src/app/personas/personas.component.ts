@@ -19,16 +19,9 @@ export class PersonasComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.personas = this.personasServices.personas.sort((a, b) => {
-      let nameA = a.nombre.toUpperCase();
-      let nameB = b.nombre.toUpperCase();
-      if (nameA < nameB) {
-        return -1;
-      }
-      if (nameA > nameB) {
-        return 1;
-      }
-      return 0;
+    this.personasServices.obtenerPersonas().subscribe((personas: Persona[]) => {
+      this.personas = personas;
+      this.personasServices.setPersonas(personas);
     });
   }
 
