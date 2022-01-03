@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "esdjl-listado-personas-angular": {
+      "hosting": {
+        "listado-personas-angular": [
+          "esdjl-listado-personas-angular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "esdjl-listado-personas-angular"
+  }
+}
